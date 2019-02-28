@@ -4,17 +4,13 @@
 </template>
 
 <script>
+  let data, val, fn, resolve, reject
+
   import {pipe, prop, propEq, assoc, pick, filter, join, map, path, concat, take} from 'ramda'
   //Type
   import {isNil} from 'ramda'
   //Logic
   import {not, or, ifElse, isEmpty} from 'ramda'
-
-  let data
-  let val
-  let fn
-  let resolve
-  let reject
 
   /**
    */

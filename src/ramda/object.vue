@@ -3,8 +3,8 @@
 </template>
 
 <script>
-  let val
-  let f
+  let val, f
+
   /**
    * 对象特征判断
    * has：包含某属性，返回true

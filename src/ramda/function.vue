@@ -3,9 +3,7 @@
 </template>
 
 <script>
-  let val
-  let f
-  let fCurry
+  let val, f, fCurry
 
   /**
    * 函数合成

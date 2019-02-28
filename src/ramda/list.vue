@@ -3,8 +3,8 @@
 </template>
 
 <script>
-  let val
-  let f
+  let val, f
+
   /**
    * 数组特征判断
    * contains：包含某成员，返回true
