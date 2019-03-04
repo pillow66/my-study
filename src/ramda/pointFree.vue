@@ -1,10 +1,11 @@
 <template>
-  <div>
-  </div>
+  <h4>pointFree</h4>
 </template>
 
 <script>
-  import {pipe, prop, propEq, assoc, pick, filter, join, map, path, concat, take} from 'ramda'
+  import {__, curry, pipe, prop, propEq, assoc, pick, filter, join, map, path, length, repeat, concat} from 'ramda'
+  //Math
+  import {add, negate} from 'ramda'
   //Type
   import {isNil} from 'ramda'
   //Logic
@@ -130,12 +131,27 @@
   const selectDataStu = path(['data', 'stu'])
   const updateItem = pipe(
     assoc('style')(['active', 'avatar']),
-    pick(['ism', 'wximg', 'style'])
+    pick(['ism', 'wximg', 'status', 'style'])
   )
-  const mapStu = map(updateItem)
+  const mapItems = map(updateItem)
+  const subLength = curry((max, len) => {
+    return add(max, negate(len))
+  })
+  const repeatItems = repeat({ism: 0, wximg: '', style: ['avatar']})
+  const insertItems = curry((max, data) => pipe(
+    //取data总长
+    length,
+    //结合数组长，算差值
+    subLength(max),
+    //依据插值补齐数组
+    repeatItems,
+    //合并数组
+    concat(__, data)
+  )(data))
 
   resolve = pipe(
-    mapStu,
+    mapItems,
+    insertItems(5),
     resolveData
   )
 
