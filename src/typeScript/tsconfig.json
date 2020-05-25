@@ -1,0 +1,15 @@
+{
+  "module": "commonjs",
+  "baseUrl": "./",
+  "paths": {
+    "foo": [
+      "types/foo/*"
+    ]
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
