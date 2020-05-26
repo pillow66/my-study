@@ -159,6 +159,8 @@ src/projects/corporate
          travelRequestId: this.travelRequestId,
          serviceId: this.serviceId
       }).then(() => this.showPage = true);
+  
+      //获取详情后，根据详情中的statusInfo，journeyInfo， person， rules，travelTripOrder，approveInfo数据展示页面
     }
   
     // 审批人 获取审批订单详情
