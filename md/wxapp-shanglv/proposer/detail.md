@@ -73,10 +73,10 @@ handleBtn(action) {
           }))
         },
        })
-       break;
-     //去预订
-     case 'book':
-       break;
+      break;
+    //去预订
+    case 'book':
+      break;
   }
 }
 ```
