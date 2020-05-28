@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Ramda from './ramda/index.vue'
+  import Ramda from './ramda/test.vue'
 
   export default {
     name: 'app',

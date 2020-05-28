@@ -41,7 +41,7 @@
    * take：返回前N个成员
    * takeLast：返回后N个成员
    * slice：从起始(包括)，至结束(不包括)，截取一个新数组
-   * remove：移除开始位置后的N个成员
+   * remove：移除开始位置起的N个成员
    * insert：在指定位置插入
    * insertAll：在指定位置插入另一数组
    * prepend：在头部插入
